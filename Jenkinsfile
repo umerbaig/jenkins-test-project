@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('checkout from git') {
       steps {
-        sh 'npm install'
+        git(url: 'https://github.com/umerbaig/jenkins-test-project', branch: 'main')
       }
     }
 
