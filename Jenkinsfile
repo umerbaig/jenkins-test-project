@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  tools (nodejs "18.5.0")
+  tools {nodejs "18.5.0"}
   stages {
     stage('checkout from git') {
       parallel {
